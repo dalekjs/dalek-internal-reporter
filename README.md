@@ -8,6 +8,10 @@ dalek-internal-reporter
 [![Dependency Status](https://david-dm.org/dalekjs/dalek-internal-reporter.png)](https://david-dm.org/dalekjs/dalek-internal-reporter)
 [![devDependency Status](https://david-dm.org/dalekjs/dalek-internal-reporter/dev-status.png)](https://david-dm.org/dalekjs/dalek-internal-reporter#info=devDependencies)
 [![NPM version](https://badge.fury.io/js/dalek-internal-reporter.png)](http://badge.fury.io/js/dalek-internal-reporter)
+[![Coverage](http://dalekjs.com/package/dalek-internal-reporter/master/coverage/coverage.png)](http://dalekjs.com/package/dalek-internal-reporter/master/coverage/index.html)
+[![unstable](https://rawgithub.com/hughsk/stability-badges/master/dist/unstable.svg)](http://github.com/hughsk/stability-badges)
+
+[![NPM](https://nodei.co/npm/dalek-internal-reporter.png)](https://nodei.co/npm/dalek-internal-reporter/)
 
 ## Warning
 
@@ -16,11 +20,12 @@ It provides all reporter helpers used by DalekJS.
 
 ## Ressources
 
-[API Documentation](http://dalekjs.com/package/dalek-internal-reporter/master/api/index.html) -
+[API Docs](http://dalekjs.com/package/dalek-internal-reporter/master/api/index.html) -
+[Trello](http://dalekjs.com/package/dalek-internal-reporter/master/api/index.html) -
 [Code coverage](http://dalekjs.com/package/dalek-internal-reporter/master/coverage/index.html) -
 [Code complexity](http://dalekjs.com/package/dalek-internal-reporter/master/complexity/index.html) -
 [Contributing](https://github.com/dalekjs/dalek-internal-reporter/blob/master/CONTRIBUTING.md) -
-[User Docs](http://dalekjs.com/docs/master/reporter.html) -
+[User Docs](http://dalekjs.com/docs/reporter.html) -
 [Homepage](http://dalekjs.com) -
 [Twitter](http://twitter.com/dalekjs)
 
