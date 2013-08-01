@@ -93,19 +93,6 @@ module.exports = function (grunt) {
       }
     },
 
-    // add current timestamp to the html document
-    includereplace: {
-      dist: {
-        options: {
-          globals: {
-            timestamp: '<%= grunt.template.today("dddd, mmmm dS, yyyy, h:MM:ss TT") %>'
-          },
-        },
-        src: 'report/docs/*.html',
-        dest: '.'
-      }
-    },
-
     // compress artifacts
     compress: {
       main: {
@@ -226,12 +213,11 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-mocha-test');
   grunt.loadNpmTasks('grunt-complexity');
   grunt.loadNpmTasks('grunt-plato');
-  grunt.loadNpmTasks('grunt-include-replace');
 
   // define runner tasks
   grunt.registerTask('lint', 'jshint');
   grunt.registerTask('test', ['clean:coverage', 'prepareCoverage', 'lint', 'mochaTest', 'generateCoverageBadge', 'complexity']);
-  grunt.registerTask('docs', ['clean:reportZip', 'clean:report', 'preparePlato', 'plato', 'includereplace', 'yuidoc', 'compress']);
+  grunt.registerTask('docs', ['clean:reportZip', 'clean:report', 'preparePlato', 'plato', 'yuidoc', 'compress']);
   grunt.registerTask('all', ['clean', 'test', 'docs']);
 
 };
