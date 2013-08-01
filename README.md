@@ -12,11 +12,7 @@ dalek-internal-reporter
 [![unstable](https://rawgithub.com/hughsk/stability-badges/master/dist/unstable.svg)](http://github.com/hughsk/stability-badges)
 
 [![NPM](https://nodei.co/npm/dalek-internal-reporter.png)](https://nodei.co/npm/dalek-internal-reporter/)
-
-## Warning
-
-This module is only used internally by [DalekJS](//github.com/dalekjs/dalek).
-It provides all reporter helpers used by DalekJS.
+[![NPM](https://nodei.co/npm-dl/dalek-internal-reporter.png)](https://nodei.co/npm/dalek-internal-reporter/)
 
 ## Ressources
 
@@ -28,6 +24,12 @@ It provides all reporter helpers used by DalekJS.
 [User Docs](http://dalekjs.com/docs/reporter.html) -
 [Homepage](http://dalekjs.com) -
 [Twitter](http://twitter.com/dalekjs)
+
+## Docs
+
+Daleks adapter for third party reporters. Defines a set of javascript interfaces,
+every third party needs to implement in order to be Dalek compliant.
+Details will follow soon, in the meantime, please check the [API Docs](http://dalekjs.com/package/dalek-internal-reporter/master/api/index.html).
 
 ## Help Is Just A Click Away
 
@@ -62,7 +64,7 @@ requests that implement the feature).
 other, better channels for seeking assistance, like StackOverflow and the
 Google Groups mailing list.
 
-![DalekJS](https://raw.github.com/dalekjs/dalekjs.com/master/img/logo.jpg)
+![DalekJS](https://raw.github.com/dalekjs/dalekjs.com/master/img/logo.png)
 
 ## Legal FooBar (MIT License)
 
