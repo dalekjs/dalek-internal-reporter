@@ -93,6 +93,34 @@ module.exports = function (grunt) {
       }
     },
 
+    // user docs
+    documantix: {
+      options: {
+        header: 'dalekjs/dalekjs.com/master/assets/header.html',
+        footer: 'dalekjs/dalekjs.com/master/assets/footer.html',
+        target: 'report/docs',
+        vars: {
+          title: 'DalekJS - Documentation - Reporter',
+          desc: 'DalekJS - Documentation - Reporter',
+          docs: true
+        }
+      },
+      src: ['index.js']
+    },
+
+    // add current timestamp to the html document
+    includereplace: {
+      dist: {
+        options: {
+          globals: {
+            timestamp: '<%= grunt.template.today("dddd, mmmm dS, yyyy, h:MM:ss TT") %>'
+          },
+        },
+        src: 'report/docs/*.html',
+        dest: '.'
+      }
+    },
+
     // compress artifacts
     compress: {
       main: {
@@ -212,12 +240,14 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-contrib-compress');
   grunt.loadNpmTasks('grunt-mocha-test');
   grunt.loadNpmTasks('grunt-complexity');
+  grunt.loadNpmTasks('grunt-documantix');
   grunt.loadNpmTasks('grunt-plato');
+  grunt.loadNpmTasks('grunt-include-replace');
 
   // define runner tasks
   grunt.registerTask('lint', 'jshint');
   grunt.registerTask('test', ['clean:coverage', 'prepareCoverage', 'lint', 'mochaTest', 'generateCoverageBadge', 'complexity']);
-  grunt.registerTask('docs', ['clean:reportZip', 'clean:report', 'preparePlato', 'plato', 'yuidoc', 'compress']);
+  grunt.registerTask('docs', ['clean:reportZip', 'clean:report', 'preparePlato', 'plato', 'documantix', 'includereplace', 'yuidoc', 'compress']);
   grunt.registerTask('all', ['clean', 'test', 'docs']);
 
 };
