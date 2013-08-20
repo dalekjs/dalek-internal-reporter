@@ -275,12 +275,14 @@ module.exports = function (grunt) {
     var pkg = grunt.config.get('pkg');
     var canaryPkg = grunt.util._.clone(pkg);
 
-    Object.keys(canaryPkg.dependencies).forEach(function (pack) {
-      if (pack.search('dalek') !== -1) {
-        delete canaryPkg.dependencies[pack];
-        canaryPkg.dependencies[pack + '-canary'] = 'latest';
-      }
-    });
+    if (canaryPkg.dependencies) {
+      Object.keys(canaryPkg.dependencies).forEach(function (pack) {
+        if (pack.search('dalek') !== -1) {
+          delete canaryPkg.dependencies[pack];
+          canaryPkg.dependencies[pack + '-canary'] = 'latest';
+        }
+      });
+    }
 
     canaryPkg.name = canaryPkg.name + '-canary';
     canaryPkg.version = canaryPkg.version + '-' + grunt.template.today('yyyy-mm-dd-HH-MM-ss');
