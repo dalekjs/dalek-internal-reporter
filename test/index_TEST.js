@@ -1,7 +1,7 @@
 'use strict';
 
-var expect = require('chai').expect;
-var Reporter = require('../index.js');
+//var expect = require('chai').expect;
+//var Reporter = require('../index.js');
 
 describe('dalek-internal-reporter', function() {
 
