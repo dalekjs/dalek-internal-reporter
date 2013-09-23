@@ -1,6 +1,6 @@
 {
   "name": "dalek-internal-reporter",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "DalekJS internal helper library for 3rd party reporters",
   "homepage": "http://dalekjs.com",
   "main": "./index.js",
